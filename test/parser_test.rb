@@ -22,6 +22,27 @@ class ParserTest < Minitest::Test
     assert_equal prawn, Prawndown::Parser.new(markdown).to_prawn
   end
 
+  def test_conversion_of_header_4
+    markdown = '#### Prawndown'
+    prawn    = '<font size="20"><b>Prawndown</b></font>'
+
+    assert_equal prawn, Prawndown::Parser.new(markdown).to_prawn
+  end
+
+  def test_conversion_of_header_5
+    markdown = '##### Prawndown'
+    prawn    = '<font size="18"><b>Prawndown</b></font>'
+
+    assert_equal prawn, Prawndown::Parser.new(markdown).to_prawn
+  end
+
+  def test_conversion_of_header_6
+    markdown = '###### Prawndown'
+    prawn    = '<font size="16"><b>Prawndown</b></font>'
+
+    assert_equal prawn, Prawndown::Parser.new(markdown).to_prawn
+  end
+
   def test_conversion_of_bold
     markdown = '**Prawndown**'
     prawn    = '<b>Prawndown</b>'
