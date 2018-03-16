@@ -1,8 +1,19 @@
 # Prawndown
+> The contents of this Readme is work in progress and might not be completely accurate.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/prawndown`. To experiment with that code, run `bin/console` for an interactive prompt.
+Prawn is a Ruby library to genere PDF files. It supports text formatting trough its own tiny HTML-esque language, which has tags for different formatting options like **bold**, _italic_ and [links](https://github.com/kaspermeyer/prawndown). Read more about the supported tags [in the official Prawn documentation](http://prawnpdf.org/api-docs/2.0/Prawn/Text.html#text-instance_method).
 
-TODO: Delete this and the text above, and describe your gem
+Prawndown converts a small subset of Markdown to a Prawn-compatible string.
+
+## Usage
+
+```ruby
+Prawndown.new('_Welcome_ to **Prawndown**').to_prawn #=> '<i>Welcome</i> to <b>Prawndown</b>'
+```
+
+More thorough examples can be found under the `examples` folder. Run `rake examples` to generate the examples PDF.
+
+*Note: Prawdown can't output the tags `<sub>`, `<sup>` and `<color>` as they lack native support in Markdown.*
 
 ## Installation
 
@@ -20,20 +31,12 @@ Or install it yourself as:
 
     $ gem install prawndown
 
-## Usage
-
-TODO: Write usage instructions here
-
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To install this gem onto your local machine, run `bundle exec rake install`.
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/prawndown.
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+## Credits
++ [Henrik Ny](https://github.com/henrik) for the [idea and name](https://gist.github.com/henrik/2775319) of the project.
++ [Johnny Broadway](https://github.com/jbroadway) for creating [Slimdown](https://gist.github.com/jbroadway/2836900) and coming up with great regular expressions to match Markdown tags with.
