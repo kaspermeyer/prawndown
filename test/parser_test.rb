@@ -29,8 +29,22 @@ class ParserTest < Minitest::Test
     assert_equal prawn, Prawndown::Parser.new(markdown).to_prawn
   end
 
+  def test_conversion_of_bold_with_alternative_syntax
+    markdown = '__Prawndown__'
+    prawn    = '<b>Prawndown</b>'
+
+    assert_equal prawn, Prawndown::Parser.new(markdown).to_prawn
+  end
+
   def test_conversion_of_italic
     markdown = '*Prawndown*'
+    prawn    = '<i>Prawndown</i>'
+
+    assert_equal prawn, Prawndown::Parser.new(markdown).to_prawn
+  end
+
+  def test_conversion_of_italic_with_alternative_syntax
+    markdown = '_Prawndown_'
     prawn    = '<i>Prawndown</i>'
 
     assert_equal prawn, Prawndown::Parser.new(markdown).to_prawn
