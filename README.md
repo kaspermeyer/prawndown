@@ -8,7 +8,7 @@ Prawndown converts a small subset of Markdown to a Prawn-compatible string.
 ## Usage
 
 ```ruby
-Prawndown.new('_Welcome_ to **Prawndown**').to_prawn #=> '<i>Welcome</i> to <b>Prawndown</b>'
+Prawndown::Parser.new('_Welcome_ to **Prawndown**').to_prawn #=> '<i>Welcome</i> to <b>Prawndown</b>'
 ```
 
 More thorough examples can be found under the `examples` folder. Run `rake examples` to generate the examples PDF.
