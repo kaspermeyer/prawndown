@@ -9,9 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Kasper Meyer"]
   spec.email         = ["hi@kaspermeyer.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Convert a small subset of Markdown to Prawn's HTML-esque markup language}
+  spec.homepage      = "https://github.com/kaspermeyer/prawndown"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
