@@ -17,6 +17,8 @@ More thorough examples can be found under the `examples` folder. Run `rake examp
 
 ## Installation
 
+> The gem hasn't been published to RubyGems yet.
+
 Add this line to your application's Gemfile:
 
 ```ruby
