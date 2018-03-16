@@ -1,9 +1,9 @@
 # Prawndown
 > The contents of this Readme is work in progress and might not be completely accurate.
 
-Prawn is a Ruby library to genere PDF files. It supports text formatting trough its own tiny HTML-esque language, which has tags for different formatting options like **bold**, _italic_ and [links](https://github.com/kaspermeyer/prawndown). Read more about the supported tags [in the official Prawn documentation](http://prawnpdf.org/api-docs/2.0/Prawn/Text.html#text-instance_method).
+A tiny Ruby gem which converts a subset of Markdown to a Prawn-compatible string.
 
-Prawndown converts a small subset of Markdown to a Prawn-compatible string.
+Prawn is a Ruby library to genere PDF files. It supports text formatting trough its own tiny HTML-esque language, which has tags for different formatting options like **bold**, _italic_ and [links](https://github.com/kaspermeyer/prawndown). Read more about the supported tags [in the official Prawn documentation](http://prawnpdf.org/api-docs/2.0/Prawn/Text.html#text-instance_method).
 
 ## Usage
 
