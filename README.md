@@ -13,7 +13,7 @@ Prawndown::Parser.new('_Welcome_ to **Prawndown**').to_prawn #=> '<i>Welcome</i>
 
 More thorough examples can be found under the `examples` folder. Run `rake examples` to generate the examples PDF.
 
-*Note: Prawdown can't output the tags `<sub>`, `<sup>` and `<color>` as they lack native support in Markdown.*
+*Note: Prawdown can't output the tags `<sub>`, `<sup>`, `<font>` and `<color>` as they lack native support in Markdown.*
 
 ## Installation
 
