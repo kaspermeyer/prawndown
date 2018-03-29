@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    prawndown (0.0.2)
+    prawndown (0.1.1)
       prawn (~> 2.0)
 
 GEM
