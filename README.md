@@ -1,11 +1,23 @@
 # Prawndown
 > The contents of this Readme is work in progress and might not be completely accurate.
 
-A tiny Ruby gem which converts a subset of Markdown to a Prawn-compatible string.
+A tiny Ruby gem to render Markdown in PDF files
 
-Prawn is a Ruby library to genere PDF files. It supports text formatting trough its own tiny HTML-esque language, which has tags for different formatting options like **bold**, _italic_ and [links](https://github.com/kaspermeyer/prawndown). Read more about the supported tags in [the official Prawn documentation](http://prawnpdf.org/api-docs/2.0/Prawn/Text.html#text-instance_method).
+Prawn is a Ruby library to generate PDF files. It supports text formatting trough its own HTML-esque language, which has tags for different formatting options like **bold**, _italic_ and [links](https://github.com/kaspermeyer/prawndown). Read more about the supported tags in the [Prawn documentation](http://prawnpdf.org/api-docs/2.0/Prawn/Text.html#text-instance_method).
 
 ## Usage
+Prawndown extends Prawn with the `markdown` method. Use it to render Markdown in the document:
+
+```ruby
+Prawn::Document.generate('markdown.pdf') do
+  markdown '# Welcome to Prawndown!'
+  markdown '**Important:** We _hope_ you enjoy your stay!'
+end
+```
+
+It accepts the same options as [`Prawn::Document#text`](http://prawnpdf.org/api-docs/2.0/Prawn/Text.html#text-instance_method)
+
+If you prefer, you can also use the parser directly:
 
 ```ruby
 Prawndown::Parser.new('_Welcome_ to **Prawndown**').to_prawn #=> '<i>Welcome</i> to <b>Prawndown</b>'
