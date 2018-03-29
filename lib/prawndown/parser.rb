@@ -1,4 +1,5 @@
 module Prawndown
+  # Markdown to Prawn parser
   class Parser
     MATCHERS = {
       /^# (.+)/                  => '<font size="26"><b>\1</b></font>', # Header 1
@@ -13,10 +14,15 @@ module Prawndown
       /\~\~(.*?)\~\~/            => '<strikethrough>\1</strikethrough>' # Strikethrough
     }
 
+    # Initialize a new +Prawndown::Parser+.
+    # +text+ must a a valid Markdown string that only contains supported tags.
+    #
+    # Supported tags are: Header 1-6, bold, italic, strikethrough and link.
     def initialize(text)
       @text = text.to_s
     end
 
+    # Parses the Markdown text and outputs a Prawn compatible string
     def to_prawn
       MATCHERS.inject(@text) do |final_string, (markdown_matcher, prawn_tag)|
         final_string.gsub(markdown_matcher, prawn_tag)
