@@ -1,11 +1,11 @@
 # Prawndown
-> The contents of this Readme is work in progress and might not be completely accurate.
 
 A tiny Ruby gem to render a subset of Markdown in PDF files
 
 Prawn is a Ruby library to generate PDF files. It supports text formatting trough its own HTML-esque language, which has tags for different formatting options like **bold**, _italic_ and [links](https://github.com/kaspermeyer/prawndown). Read more about the supported tags in the [Prawn documentation](http://prawnpdf.org/api-docs/2.0/Prawn/Text.html#text-instance_method).
 
 ## Usage
+
 Prawndown extends Prawn with the `markdown` method. Use it to render Markdown in the document:
 
 ```ruby
@@ -29,8 +29,6 @@ More thorough examples can be found under the `examples` folder. Run `rake examp
 
 ## Installation
 
-> The gem hasn't been published to RubyGems yet.
-
 Add this line to your application's Gemfile:
 
 ```ruby
@@ -52,5 +50,6 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 To install this gem onto your local machine, run `bundle exec rake install`.
 
 ## Credits
+
 + [Henrik Ny](https://github.com/henrik) for the [idea and name](https://gist.github.com/henrik/2775319) of the project.
 + [Johnny Broadway](https://github.com/jbroadway) for creating [Slimdown](https://gist.github.com/jbroadway/2836900) and coming up with great regular expressions to match Markdown tags with.
