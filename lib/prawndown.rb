@@ -7,6 +7,7 @@ module Prawndown
     # Renders Markdown in the current document
     #
     # It supports header 1-6, bold text, italic text, strikethrough and links
+    # It supports the same options as +Prawn::Document#text+
     #
     #   Prawn::Document.generate('markdown.pdf') do
     #     markdown '# Welcome to Prawndown!'
