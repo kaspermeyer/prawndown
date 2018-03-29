@@ -17,7 +17,7 @@ end
 
 It accepts the same options as [`Prawn::Document#text`](http://prawnpdf.org/api-docs/2.0/Prawn/Text.html#text-instance_method)
 
-If you prefer, you can also use the parser directly:
+If prefered, the parser can also be invoked directly:
 
 ```ruby
 Prawndown::Parser.new('_Welcome_ to **Prawndown**').to_prawn #=> '<i>Welcome</i> to <b>Prawndown</b>'
