@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Kasper Meyer"]
   spec.email         = ["hi@kaspermeyer.com"]
 
-  spec.summary       = %q{A tiny Ruby gem to render Markdown in PDF files}
+  spec.summary       = %q{A tiny Ruby gem to render a subset of Markdown in PDF files}
   spec.homepage      = "https://github.com/kaspermeyer/prawndown"
   spec.license       = "MIT"
 
