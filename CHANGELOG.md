@@ -6,6 +6,10 @@ For more information about changelogs, check
 [Keep a Changelog](http://keepachangelog.com) and
 [Vandamme](http://tech-angels.github.io/vandamme).
 
+## 0.1.2 - 2018.03.29
+
+* [ENHANCEMENT] Improve documentation
+
 ## 0.1.1 - 2018.03.29
 
 * [ENHANCEMENT] Add generatable examples
