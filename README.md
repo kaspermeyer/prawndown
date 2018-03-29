@@ -1,7 +1,7 @@
 # Prawndown
 > The contents of this Readme is work in progress and might not be completely accurate.
 
-A tiny Ruby gem to render Markdown in PDF files
+A tiny Ruby gem to render a subset of Markdown in PDF files
 
 Prawn is a Ruby library to generate PDF files. It supports text formatting trough its own HTML-esque language, which has tags for different formatting options like **bold**, _italic_ and [links](https://github.com/kaspermeyer/prawndown). Read more about the supported tags in the [Prawn documentation](http://prawnpdf.org/api-docs/2.0/Prawn/Text.html#text-instance_method).
 
