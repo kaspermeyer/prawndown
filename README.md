@@ -1,21 +1,21 @@
 # Prawndown
 
-A tiny Ruby gem to render a subset of Markdown in PDF files
+A tiny Ruby gem to render a subset of Markdown in PDF files.
 
-Prawn is a Ruby library to generate PDF files. It supports text formatting trough its own HTML-esque language, which has tags for different formatting options like **bold**, _italic_ and [links](https://github.com/kaspermeyer/prawndown). Read more about the supported tags in the [Prawn documentation](http://prawnpdf.org/api-docs/2.0/Prawn/Text.html#text-instance_method).
+Prawn is a Ruby library to generate PDF files. It supports text formatting trough its own HTML-esque language, which has tags for different formatting options like **bold**, _italic_, ~~strikethrough~~ and [links](https://github.com/kaspermeyer/prawndown). Read more about the supported tags in the [Prawn documentation](http://prawnpdf.org/api-docs/2.0/Prawn/Text.html#text-instance_method).
 
 ## Usage
 
-Prawndown extends Prawn with the `markdown` method. Use it to render Markdown in the document:
+Prawndown extends Prawn with the `markdown` method. It accepts the same options as [`Prawn::Document#text`](http://prawnpdf.org/api-docs/2.0/Prawn/Text.html#text-instance_method).
+
+Use it to render Markdown in the document:
 
 ```ruby
 Prawn::Document.generate('markdown.pdf') do
   markdown '# Welcome to Prawndown!'
-  markdown '**Important:** We _hope_ you enjoy your stay!'
+  markdown '**Important:** We _hope_ you enjoy your stay!', color: 'AAAAAA'
 end
 ```
-
-It accepts the same options as [`Prawn::Document#text`](http://prawnpdf.org/api-docs/2.0/Prawn/Text.html#text-instance_method)
 
 If prefered, the parser can also be invoked directly:
 
@@ -24,6 +24,22 @@ Prawndown::Parser.new('_Welcome_ to **Prawndown**').to_prawn #=> '<i>Welcome</i>
 ```
 
 More thorough examples can be found under the `examples` folder. Run `rake examples` to generate the examples PDF.
+
+### Supported Markdown syntax
+```markdown
+# Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6
+_Italic_
+*Italic*
+__Bold__
+**Bold**
+~~Strikethrough~~
+[Links](https://github.com/kaspermeyer/prawndown)
+```
 
 *Note: Prawdown can't output the tags `<sub>`, `<sup>`, `<font>` and `<color>` as they lack native support in Markdown.*
 
