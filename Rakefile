@@ -8,3 +8,10 @@ Rake::TestTask.new(:test) do |t|
 end
 
 task :default => :test
+
+desc 'Generate the examples'
+task :examples do
+  puts 'Building markdown.pdf'
+  require_relative 'examples/markdown'
+  puts 'Done'
+end
