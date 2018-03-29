@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/kaspermeyer/prawndown.svg?branch=master)](https://travis-ci.org/kaspermeyer/prawndown)
 [![Coverage Status](https://coveralls.io/repos/github/kaspermeyer/prawndown/badge.svg?branch=master)](https://coveralls.io/github/kaspermeyer/prawndown?branch=master)
+[![Read the Docs (version)](http://img.shields.io/badge/docs-%E2%9C%93-green.svg)](http://www.rubydoc.info/gems/prawndown/0.1.2)
+[![Gem](https://img.shields.io/gem/v/prawndown.svg)](https://github.com/kaspermeyer/prawndown)
 
 A tiny Ruby gem to render a subset of Markdown in PDF files.
 
