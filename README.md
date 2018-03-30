@@ -18,7 +18,7 @@ Use it to render Markdown in the document:
 ```ruby
 Prawn::Document.generate('markdown.pdf') do
   markdown '# Welcome to Prawndown!'
-  markdown '**Important:** We _hope_ you enjoy your stay!', color: 'AAAAAA'
+  markdown '**Important:** We _hope_ you enjoy your stay!', color: 'aaaaaa', leading: 10
 end
 ```
 
